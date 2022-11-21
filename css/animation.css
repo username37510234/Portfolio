@@ -1,0 +1,13 @@
+#navi li:hover {
+    text-align: center;
+    width: 10%;
+    padding: 12px;
+    background-color: rgb(133, 130, 130);
+	outline: 0;
+    padding-top: 10px;
+    padding-bottom: 14px;
+}
+#navi a:hover {
+    color: rgb(15, 230, 230);
+	outline: 0;
+}
