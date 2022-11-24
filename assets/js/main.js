@@ -156,4 +156,10 @@
 			}
 		});
 
+		$('ul.feature-images li img').on({"mouseover":function(){
+			$(this).next().css({"display":"block"});},
+		"mouseout":function(){
+			$(this).next().css({"display":"none"});}
+		});
+
 })(jQuery);
