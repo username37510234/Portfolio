@@ -2408,17 +2408,28 @@ input, select, textarea {
 				position: relative;
 			}
 			ul.feature-images li img:hover{
-				margin-left: 10%;
-				width: 70%;
+				padding-top: 4%;
+				width: 85%;
 				transition: transform 1s;
 				filter: brightness(60%);
 			}
-			ul.feature-images li h4{
+			ul.feature-images li p{
 				display: none;
+				font-size: xx-large;
+				font-weight: bold;
 				position: absolute;
-				color: #010202;
+				color: yellow;
+				text-align: center;
+				vertical-align: middle;
+				-webkit-text-stroke-width: 1px;
+				-webkit-text-stroke-color: #a9c29d;
 			}
 
+			.wrap {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
 /* Feature Icons */
 
 	ul.feature-icons {
