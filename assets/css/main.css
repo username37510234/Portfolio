@@ -2413,7 +2413,7 @@ input, select, textarea {
 				transition: transform 1s;
 				filter: brightness(60%);
 			}
-			ul.feature-images li p{
+			ul.feature-images div li p{
 				display: none;
 				font-size: xx-large;
 				font-weight: bold;
