@@ -156,12 +156,25 @@
 		}
 	});
 
-	$('ul.feature-images li img').on({
+	$('ul.feature-images li div img').on({
 		"mouseover": function () {
-			$(this).next().css({ "display": "block" });
+			$(this).css({"padding-top":"4%",
+			"width": "85%","transition": "transform 1s","filter":" brightness(60%)"});
+			$(this).next().css({ "display": "block"});
 		},
 		"mouseleave": function () {
-			$(this).next().css({ "display": "none" });
+			$(this).css({"padding-top":"0%",
+			"width": "90%","transition": "transform 1s","filter":" brightness(100%)"});
+			$(this).next().css({"display": "none"},500);
+		}
+	});
+
+	$('ul.feature-images li div p').on({
+		"mouseover": function () {
+			$(this).prev().mouseover();
+		},
+			"mouseleave": function () {
+			$(this).prev().mouseleave();
 		}
 	});
 
@@ -171,5 +184,22 @@
 		$('.major').html("<h3 />나는 이런 사람입니다");
 	}
 
-
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+	
+	for (i = 0; i < acc.length; i++) {
+	  acc[i].addEventListener("click", function() {
+		/* Toggle between adding and removing the "active" class,
+		to highlight the button that controls the panel */
+		this.classList.toggle("active");
+	
+		/* Toggle between hiding and showing the active panel */
+		var panel = this.nextElementSibling;
+		if (panel.style.display === "block") {
+		  panel.style.display = "none";
+		} else {
+		  panel.style.display = "block";
+		}
+	  });
+	}
 })(jQuery);
